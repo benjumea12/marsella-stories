@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 // Styled components
-import { Main } from "./styled/index.styled"
+import { Main } from "../styled/index.styled"
 // Components
 import { Layout, Header, Footer, StoriesCircle } from "../components"
 

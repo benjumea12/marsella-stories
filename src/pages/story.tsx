@@ -10,7 +10,7 @@ import {
   itemMotionHideLeft,
   itemMotionHideRight,
   itemMotionShowRight,
-} from "./styled/story.styled"
+} from "../styled/story.styled"
 // Components
 import { Layout, Header, Footer, Typography } from "../components"
 // Theme
