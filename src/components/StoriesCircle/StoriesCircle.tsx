@@ -75,8 +75,6 @@ const StoriePoint = (props: StoriePointProps) => {
 const StoriesCircle = (props: any) => {
   const [open, setOpen] = useState(false)
 
-  const desface = getRandomInt(0, 50)
-
   return (
     <Main>
       <Typography className="title" variant="h2" bg="orange" align="right">
@@ -100,7 +98,7 @@ const StoriesCircle = (props: any) => {
       <Circle>
         {pointsArray.map((item: any, index: number) => (
           <StoriePoint
-            rotation={desface+(360 / pointsArray.length) * index}
+            rotation={(360 / pointsArray.length) * index}
             width={getRandomInt(50, 95)}
             delay={getRandomInt(500, 600) / 100}
             handleOpen={() => setOpen(true)}
