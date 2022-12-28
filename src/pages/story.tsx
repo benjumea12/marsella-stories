@@ -185,9 +185,13 @@ const StoryPage = () => {
     setTimeout(() => {
       if (changing) {
         if (direction === "right") {
-          setProgressTab(progressTab + 1)
+          if (progressTab < 1) {
+            setProgressTab(progressTab + 1)
+          }
         } else {
-          setProgressTab(progressTab - 1)
+          if (progressTab > 0) {
+            setProgressTab(progressTab - 1)
+          }
         }
       }
       setChanging(false)
