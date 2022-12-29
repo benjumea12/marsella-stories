@@ -5,7 +5,7 @@ import { media } from "../../theme"
 
 export const Main = styled.div`
   position: fixed;
-  z-index: 3;
+  z-index: 1;
   top: 0;
   width: 100%;
   padding: ${(props) => props.theme.margin.vertical} ${(props) => props.theme.margin.horizontal};

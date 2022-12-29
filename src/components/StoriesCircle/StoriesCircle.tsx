@@ -99,7 +99,7 @@ const StoriesCircle = (props: any) => {
         {pointsArray.map((item: any, index: number) => (
           <StoriePoint
             rotation={(360 / pointsArray.length) * index}
-            width={getRandomInt(50, 95)}
+            width={75}
             delay={getRandomInt(500, 600) / 100}
             handleOpen={() => setOpen(true)}
           />

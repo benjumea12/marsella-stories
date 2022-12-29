@@ -33,13 +33,13 @@ const Layout = (props: LayoutProps) => {
   const onPageLoad = () => {
     setTimeout(() => {
       setHiding(true)
-    }, 3000)
+    }, 2000)
   }
 
   useEffect(() => {
     setTimeout(() => {
       hiding && setLoadPage(true)
-    }, 1000)
+    }, 800)
   }, [hiding])
 
   return (
@@ -51,7 +51,7 @@ const Layout = (props: LayoutProps) => {
             style={{ position: "fixed", zIndex: 10 }}
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1 }}
           >
             <Loader hiding={hiding} bg={bg} />
           </motion.div>
@@ -60,7 +60,7 @@ const Layout = (props: LayoutProps) => {
 
       {loadPage && (
         <Main bg={bg}>
-          <SVGMap />
+          <SVGMap bg={bg} />
           <div className="content">{children}</div>
         </Main>
       )}
