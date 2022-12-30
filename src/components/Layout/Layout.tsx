@@ -59,19 +59,19 @@ const Layout = (props: LayoutProps) => {
       </AnimatePresence>
 
       {loadPage && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            delay: 0,
-            duration: 1,
-          }}
-        >
-          <Main bg={bg}>
+        <Main bg={bg}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 0,
+              duration: 1,
+            }}
+          >
             <SVGMap bg={bg} />
             <div className="content">{children}</div>
-          </Main>
-        </motion.div>
+          </motion.div>
+        </Main>
       )}
     </ThemeProvider>
   )
