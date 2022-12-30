@@ -14,7 +14,9 @@ export const Main = styled.div`
   }
   .logo-ligth {
     height: 50px;
+    cursor: pointer;
   }
+
   @media (max-width: ${media.xl}) {
     .logo {
       height: 50px;

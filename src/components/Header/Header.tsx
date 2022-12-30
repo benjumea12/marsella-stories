@@ -1,5 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import { navigate } from "gatsby"
+import { motion } from "framer-motion"
 // Styled components
 import { Main } from "./Header.styled"
 // Images
@@ -8,10 +10,17 @@ import logoWhite from "../../images/logo-white.svg"
 
 interface headerProps {
   bg: "dark" | "ligth"
+  open?: any
 }
 
 const Header = (props: headerProps) => {
-  const { bg } = props
+  const { bg, open } = props
+
+  const navigateStory = () => {
+    setTimeout(() => {
+      navigate("/")
+    }, 600)
+  }
 
   return (
     <Main>
@@ -19,10 +28,18 @@ const Header = (props: headerProps) => {
         {bg === "dark" && (
           <img className="logo" src={logoBlack} alt="Logo historias Marsella" />
         )}
-        {bg === "ligth" && (
-          <img className="logo-ligth" src={logoWhite} alt="Logo historias Marsella" />
-        )}
       </Link>
+      {bg === "ligth" && (
+        <img
+          className="logo-ligth"
+          src={logoWhite}
+          alt="Logo historias Marsella"
+          onClick={() => {
+            open()
+            navigateStory()
+          }}
+        />
+      )}
     </Main>
   )
 }

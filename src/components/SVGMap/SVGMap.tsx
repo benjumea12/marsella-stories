@@ -27,7 +27,7 @@ const SVGMap = (props: SVGMapProps) => {
 
   const transition = {
     delay: 1,
-    duration: 2.5,
+    duration: 2,
   }
 
   const [mousePosition, setMousePosition] = useState({
@@ -65,7 +65,7 @@ const SVGMap = (props: SVGMapProps) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          delay: 0.5,
+          delay: 0,
           duration: 1,
         }}
       >
@@ -79,8 +79,7 @@ const SVGMap = (props: SVGMapProps) => {
             transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
           }}
           transition={{
-            type: "spring",
-            delay: 0,
+            ease: "easeOut",
             duration: 0.3,
           }}
         >
@@ -98,9 +97,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M969.5 509L999.5 513M969.5 525L996 529.5M1017 493L1020.5 478"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -109,9 +108,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M559.5 495.5L648.5 511.5H696.5L709 514L723.5 516.5L738.5 518.5H748.5L848 529.601M869.5 532L848 529.601M859 480L848 529.601"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -120,9 +119,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M844.5 582.5L853 531.5M793 577.5L800 525.5L834 282M746 520L736 566M689 561L694.5 511.5L704 460M638.5 556.5L642.5 511.5L653 455.5M594 502L600 448M750.5 516.5L782.5 282"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -131,9 +130,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M732 250.5L712 413L703 461M653 450.5L663.368 382M623 398L627.5 377L628.583 372.5M628.583 372.5L634 350L653 332.5L662 323.5L672 350L667 358L663.368 382M628.583 372.5L663.368 382"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -142,9 +141,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M635.5 353.086H666M560.5 348.522L550.5 453M502.5 386.053L499 411.919L502.5 439.306M449 431.191V379.459L466 241M671.5 353.086L719.5 362.722L768 366.273L821.5 369.823L881 379.459L1001 395.598M1103.5 409.383L1089 407.433M1089 407.433L1111 325.699M1089 407.433L1039.5 400.776M1001 395.598L1029.5 437.785L1039.5 400.776M1001 395.598L1039.5 400.776"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -153,9 +152,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M880.5 434.5L873 430.437L877 379.225L887.5 329.028L899 273.254V253.986L913 236.239H945.5L956 219M920 283.394H949.5L1023 303.169M949.5 287.958L935.5 364.014L930 387.338"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -164,9 +163,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M725.5 305L778 314.5L830 319.5L915 332.597M989 344L915 332.597M915 332.597L909 381M931.5 385.5L927.5 436M767 390L816 395M607.5 395L600.5 451M901 485L894 535.5M925 488L918 538M946.5 492.5L940 538M955.5 543L946.5 618"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -175,9 +174,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M300.819 1C292.339 6.4807 273.283 20.9298 264.902 34.8807C256.522 48.8316 256.754 79.2246 257.918 92.6772C257.918 103.971 256.522 130.245 250.934 144.993C243.951 163.428 278.371 232.186 279.369 233.681C280.167 234.876 317.614 261.749 336.238 275.035C347.213 284.17 369.661 303.335 371.656 306.923C374.15 311.407 399.592 368.705 423.038 371.695C441.794 374.086 730.828 409.561 873 427"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -186,9 +185,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M2 422.5L12 417.5L62.5 422.5C75.1667 413.5 106.3 397.7 129.5 406.5C152.7 415.3 172.167 420.833 179 422.5L203 390C207.333 388.167 219.4 387.3 233 398.5C250 412.5 253 406 252 384C251.2 366.4 278 357.333 291.5 355L331.5 349C349.833 350.667 389.9 356.4 403.5 366C417.1 375.6 429.5 375.333 434 374"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -197,9 +196,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M146 647V673L162 687H219.5L385.5 647L405.5 653.5L434.5 647C453.667 655.5 501.2 668.7 538 653.5C547.667 654.333 568.3 652.8 573.5 640C580 624 578 603.5 629 608.5C669.8 612.5 715.667 617.167 733.5 619"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -208,9 +207,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M536 925.5C568 926 633.4 910.9 639 846.5C639 809 638 796.5 653 766.5C665 742.5 666.667 707.5 666 693C664.333 687.333 670.3 671.9 707.5 655.5C754 635 801.5 612.5 820.5 615.5C839.5 618.5 864 585.5 867 557.5C869.4 535.1 878 467.333 880 434L980 439.5H1043L1078 463C1105.83 465.167 1158.6 459.9 1147 421.5C1143.5 415.167 1140.1 400.3 1154.5 391.5C1172.5 380.5 1186.5 355 1234.5 385C1272.9 409 1285.5 384 1287 368.5C1290.83 361.167 1306.7 345.9 1339.5 343.5C1372.3 341.1 1372.17 315.167 1368 302.5L1339.5 277L1368 230L1399.5 201.5L1406 177C1421.5 170.833 1443.2 154.1 1406 136.5C1389.2 126.1 1419 104.167 1436 94.5L1467 72.5C1475 66.1667 1486.2 43 1467 1M707.5 1C702.333 5 686.5 11.8 664.5 7C657.667 8.66667 638.9 28.5 618.5 94.5C615.5 99.3333 615 115.8 637 143C659 170.2 676.833 201.333 683 213.5L782.5 283"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -219,9 +218,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M1287 -1C1292 7.5 1295.8 30 1271 52C1246.2 74 1247.67 118.833 1251.5 138.5C1254 145 1248.2 160.8 1205 172L1168 198.5L1050.5 232C1039.67 234.667 1016.6 242.8 1011 254C1005.4 265.2 1001.67 290.333 1000.5 301.5L989 347.5L972 439"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -230,9 +229,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M607 152.5C613.167 161.5 634.5 181.9 670.5 191.5M690 217V198.5L705 176.5L732.5 152.5L738.5 122.5L720 116.5M720 116.5V135M720 116.5L732.5 98L720 86.5L705 105L706 129.5"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -241,9 +240,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M753.5 130.5L760.5 119V79.5V61M753.5 130.5L739.5 123V89L744 72.5L739.5 47.8362M753.5 130.5L751 158L733 162V152.5M720 86.5L739.5 47.8362M749 29L739.5 47.8362M739.5 47.8362L760.5 61M760.5 61L772.5 29"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -252,9 +251,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M706 181L710 187L715.5 211.5L736.5 227L747.5 232.5L763 258.5L783.5 266V283M786.5 620.5L769 748.5V766.5L777.5 780.5V805.5V831L774 850.5L765.5 860.5L763.5 874.5L765.5 891.5L780 926"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -263,9 +262,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M778 826L799 823M799 823L812 814.5L821.5 816.5M799 823L805 848M821.5 816.5L832.5 810V801M821.5 816.5V829L805 848M805 848L778 857M805 848L812 879L789.5 892.5L778 857M778 857L772 853.5"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -274,9 +273,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M784.5 875L808.5 863.5M812 878L819 890M729.5 859.5H756M756 859.5H766M756 859.5L758.509 831M763 780H779M763 780L758.509 831M763 780L715.5 774M763 780L768.5 766M779 780L781 758.5L787.5 755H790M779 780H799M799 780H819V755H812M799 780V755M799 755H790M799 755H812M790 755V731M790 731L772 728.5M790 731L819 733.578M835 735L819 733.578M812 755L819 733.578M819 733.578L829.5 661.082L847.5 634M781 654.5L851 664M779 679.5L857.5 688M774.5 708.5L739.5 703M758.509 831H777M758.509 831L709.5 826M706.5 865.5L715.5 774M715.5 774L719.5 722L731.5 645"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -285,9 +284,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M771.5 728.5L719 724.5L665.5 712.5M715.5 770.5L653.5 766L632.5 756.5L614.5 754M705 657L709.5 667.5L727.5 671.5L779.5 678.5M634.5 608L614.5 754M614.5 754L607.5 762.5L588.5 758.5"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -296,9 +295,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M666 716.5L635 710.5L569 704.5M569 704.5L528.5 698.5L525.5 695M569 704.5L564.5 741L556 746H547.5L543.5 741L508 730.5M538.5 653.5L528.5 681.5L522.5 691.5L525.5 695M525.5 695L516 710.5L508 730.5M508 730.5L472 704.5V695"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -307,9 +306,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M550 701.5L547.25 721M544.5 740.5L547.25 721M515 716.5L547.25 721M488 659.5L485.5 670L478.5 685L504 703.514M515 711.5L504 703.514M521.5 659.5L518.5 675L504 703.514"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -318,9 +317,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M504.5 660L501.5 674.5L492 694.5M628 659L674.5 674.5L682 614L688.5 562.998M730 644V619.5M730 619.5H787.5M730 619.5L743 571M599 550.5L605 555L735.5 567.5L743 571M743 571L843.5 582.5L855.5 588"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -329,9 +328,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M793 577.5L787.5 621.5M637 558.5L634 609.5"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -340,9 +339,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M434 436.5L450.5 430.5L499.5 436.5L550 442L875 481L903.5 484.581M970.5 493L965.5 540L953.5 544L868.5 531.5M970.5 493L980.5 439M970.5 493L903.5 484.581M909 439L903.5 484.581"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -351,9 +350,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M905.5 460L950 465.5M950 465.5L953 438.5M950 465.5L946.5 490"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -362,9 +361,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M971 479.5L994 482.75M1017 486L994 482.75M998 464L994 482.75"
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -381,8 +380,8 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M653.729 539.476L664.444 537.496L685.456 540.362L684.534 547.12L663.522 544.253L653.729 539.476ZM653.729 539.476L649.461 538.893M651.199 540.449L651.555 537.84"
               stroke={colorPrimary}
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -391,8 +390,8 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M686.035 545.948L678.493 544.919C674.747 544.224 674.648 541.825 678.862 542.216L686.404 543.245"
               stroke={colorLigth}
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -401,9 +400,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M664.966 541.697L667.794 542.083L667.978 540.731L665.15 540.345C663.567 540.221 663.564 541.414 664.966 541.697Z"
               stroke={colorLigth}
-              stroke-width="0.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="0.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -420,8 +419,8 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M655.573 525.961L666.288 523.981L687.3 526.847L686.378 533.605L665.366 530.739L655.573 525.961ZM655.573 525.961L651.304 525.379M653.043 526.934L653.398 524.326"
               stroke={colorPrimary}
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -430,8 +429,8 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M688.063 531.081L680.521 530.053C676.775 529.358 676.676 526.958 680.89 527.35L688.431 528.378"
               stroke={colorLigth}
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -440,9 +439,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M666.809 528.182L669.637 528.568L669.822 527.216L666.994 526.831C665.41 526.706 665.408 527.899 666.809 528.182Z"
               stroke={colorLigth}
-              stroke-width="0.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="0.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -452,8 +451,8 @@ const SVGMap = (props: SVGMapProps) => {
               d="M668.832 538.095L685.456 540.362L686.378 533.605L669.753 531.337L666.175 534.291L668.832 538.095Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -462,8 +461,8 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M686.957 536.19L679.415 535.162C675.681 534.377 675.742 530.806 679.968 531.107L687.51 532.136"
               stroke={colorLigth}
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <ellipse
               cx="670.782"
@@ -609,8 +608,8 @@ const SVGMap = (props: SVGMapProps) => {
               d="M966.797 322.971L978.368 324.946L980.937 309.903L969.365 307.927C955.945 309.804 960.531 321.305 966.797 322.971Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -619,9 +618,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M963.452 314.659L972.709 316.239M966.827 318.808L968.012 311.865"
               stroke={colorLigth}
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -630,9 +629,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M977.479 330.153L982.602 303.637L980.866 327.754L984.592 312.909L984.168 322.364"
               stroke={colorPrimary}
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -641,9 +640,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M656.162 636.441L662.581 640.162M662.581 640.162L656.162 643.882L647.378 638.508M662.581 640.162V649.971M662.581 640.162L664.946 638.791M662.581 649.971L660.216 652M662.581 649.971L664.27 652M664.946 638.791L669 636.441L656.162 629L644 636.441L647.378 638.508M664.946 638.791V643.206L656.162 648.618L647.378 643.206V638.508"
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -653,9 +652,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M944.05 428.925V408H962.95V428.925H944.05Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -665,9 +664,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M959 412H948V417H959V412Z"
               fill={colorLigth}
               stroke={colorLigth}
-              stroke-width="4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <circle cx="946.425" cy="424.875" r="2.025" fill={colorLigth} />
             <circle cx="960.25" cy="424.875" r="2.025" fill={colorLigth} />
@@ -679,9 +678,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M951.833 427L951 424H956L955.167 427H951.833Z"
               fill={colorLigth}
               stroke={colorLigth}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -691,9 +690,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M941.35 411.375H940V416.1H941.35V411.375Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -703,9 +702,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M948.1 428.25H945.4V432.975H948.1V428.25Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -715,9 +714,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M960.925 428.25H958.225V432.975H960.925V428.25Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -727,9 +726,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M967 411.375H965.65V416.1H967V411.375Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <circle cx="807.5" cy="291.5" r="14.5" fill={colorPrimary} />
             <motion.path
@@ -739,9 +738,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M808.121 282V290M804 285.886H812"
               stroke={colorLigth}
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -750,9 +749,9 @@ const SVGMap = (props: SVGMapProps) => {
               transition={transition}
               d="M797 296.889H800.706L802.353 293L804.412 300L806.059 294.556L807.706 296.889L809.765 294.556L811 298.833L812.647 296.889H818"
               stroke={colorLigth}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -762,9 +761,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M915.287 572V562.171H918.153L919.382 572H915.287Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -801,9 +800,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M915.287 572V562.171H918.153L919.382 572H915.287Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -840,9 +839,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M888.287 580V570.171H891.153L892.382 580H888.287Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -879,9 +878,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M905.286 595.057L905.333 585.228L908.199 585.242L909.382 595.077L905.286 595.057Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}
@@ -918,9 +917,9 @@ const SVGMap = (props: SVGMapProps) => {
               d="M905.286 595.057L905.333 585.228L908.199 585.242L909.382 595.077L905.286 595.057Z"
               fill={colorPrimary}
               stroke={colorPrimary}
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <motion.path
               variants={icon}

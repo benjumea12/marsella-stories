@@ -153,6 +153,7 @@ const StoryPage = () => {
   const [hide, setHide] = useState(false)
   const [direction, setDirection] = useState<"right" | "left">("right")
   const [selectedId, setSelectedId] = useState<any>(null)
+  const [open, setOpen] = useState(false)
 
   const [paginator, setPaginator] = useState({
     start: 0,
@@ -209,15 +210,33 @@ const StoryPage = () => {
     setChanging(true)
   }
 
-  console.log(selectedId);
-  
-
   return (
     <Layout bg="dark">
-      <Header bg="ligth" />
+      <Header bg="ligth" open={() => setOpen(true)} />
       <ButtonAction onNext={handleNext} onPrev={handlePrev} />
       <AnimateSharedLayout>
         <Main>
+          {open && (
+            <div
+              className="container-story-overflow"
+            >
+              <motion.div
+                className="story-overflow"
+                animate={
+                  open
+                    ? {
+                        height: "120vw",
+                        width: "120vw",
+                        left: "-10vw",
+                        top: "-35vw",
+                      }
+                    : {}
+                }
+                transition={{ duration: 0.6 }}
+              />
+            </div>
+          )}
+
           <AnimatePresence>
             {selectedId && (
               <motion.div

@@ -38,6 +38,20 @@ export const Main = styled.div`
       }
     }
   }
+  .container-story-overflow {
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .story-overflow {
+      position: fixed;
+      border-radius: 100%;
+      background-color: ${(props) => props.theme.colors.ligth};
+    }
+  }
 
   .container {
     padding: 3% 6% 6% 6%;

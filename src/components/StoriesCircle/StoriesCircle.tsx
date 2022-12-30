@@ -89,7 +89,7 @@ const StoriesCircle = (props: any) => {
           }}
           transition={{
             duration: 0.8,
-            delay: 3.5,
+            delay: 3,
           }}
         >
           Feliz el pueblo <br /> cuya historia
@@ -98,9 +98,10 @@ const StoriesCircle = (props: any) => {
       <Circle>
         {pointsArray.map((item: any, index: number) => (
           <StoriePoint
-            rotation={(360 / pointsArray.length) * index}
+            key={item}
             width={75}
-            delay={getRandomInt(500, 600) / 100}
+            rotation={(360 / pointsArray.length) * index}
+            delay={getRandomInt(400, 500) / 100}
             handleOpen={() => setOpen(true)}
           />
         ))}
@@ -146,7 +147,7 @@ const StoriesCircle = (props: any) => {
           }}
           transition={{
             duration: 0.8,
-            delay: 3.8,
+            delay: 3.4,
           }}
         >
           se lee con <br /> aburrimiento.
