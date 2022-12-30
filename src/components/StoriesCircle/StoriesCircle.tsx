@@ -89,7 +89,7 @@ const StoriesCircle = (props: any) => {
           }}
           transition={{
             duration: 0.8,
-            delay: 3,
+            delay: 2.5,
           }}
         >
           Feliz el pueblo <br /> cuya historia
@@ -113,7 +113,7 @@ const StoriesCircle = (props: any) => {
             opacity: 1,
           }}
           transition={{
-            delay: 2.5,
+            delay: 2.8,
             duration: 0.5,
           }}
           className="church-contain"
@@ -147,7 +147,7 @@ const StoriesCircle = (props: any) => {
           }}
           transition={{
             duration: 0.8,
-            delay: 3.4,
+            delay: 3,
           }}
         >
           se lee con <br /> aburrimiento.

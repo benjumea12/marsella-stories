@@ -1,5 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import { motion } from "framer-motion"
 // Styled components
 import { Main } from "../styled/index.styled"
 // Components
