@@ -14,7 +14,7 @@ import {
 // Theme
 import { getRandomInt } from "../../theme"
 // Images
-import church from "../../images/church-icon.png"
+import church from "../../images/church-icon.svg"
 // Framer motion
 import { motion } from "framer-motion"
 // data

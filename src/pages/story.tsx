@@ -209,6 +209,9 @@ const StoryPage = () => {
     setChanging(true)
   }
 
+  console.log(selectedId);
+  
+
   return (
     <Layout bg="dark">
       <Header bg="ligth" />
@@ -236,7 +239,7 @@ const StoryPage = () => {
                 >
                   <motion.img
                     className="image"
-                    src={picture1}
+                    src={items[selectedId].value}
                     layoutId={`item-image-${selectedId}`}
                   />
                   <motion.button
@@ -299,7 +302,7 @@ const StoryPage = () => {
                     <AnimatePresence>
                       {!hide && (
                         <motion.img
-                          key="imagen"
+                          key={`imagen-${index}`}
                           layoutId={`item-image-${index}`}
                           className="picture"
                           src={item.value}

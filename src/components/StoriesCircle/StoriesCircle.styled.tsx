@@ -38,8 +38,10 @@ export const Circle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    height: 13vh;
+    width: 13vh;
     border-radius: 100%;
+    box-shadow: 6px 6px 6px rgba(0,0,0,.1);
     background-color: ${(props) => props.theme.colors.ligth};
 
     .story-overflow {
@@ -50,7 +52,7 @@ export const Circle = styled.div`
     }
 
     .church-icon {
-      height: 90px;
+      height: 10vh;
     }
 
     @media (max-width: ${media.xl}) {

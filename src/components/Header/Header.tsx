@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 // Styled components
 import { Main } from "./Header.styled"
 // Images
-import logoBlack from "../../images/logo-black.png"
-import logoWhite from "../../images/logo-white.png"
+import logoBlack from "../../images/logo-black.svg"
+import logoWhite from "../../images/logo-white.svg"
 
 interface headerProps {
   bg: "dark" | "ligth"
