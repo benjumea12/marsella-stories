@@ -38,10 +38,10 @@ export const Circle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 13vh;
-    width: 13vh;
+    height: 14vh;
+    width: 14vh;
     border-radius: 100%;
-    box-shadow: 6px 6px 6px rgba(0,0,0,.1);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
     background-color: ${(props) => props.theme.colors.ligth};
 
     .story-overflow {
@@ -75,19 +75,21 @@ export const Point = styled.div<StoriePointProps>`
     height: 10px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 
     .line {
-      width: calc(100% - 40px);
+      width: 100%;
       height: 2px;
       background-color: ${(props) => props.theme.colors.black};
     }
     .point {
-      height: 40px;
-      width: 40px;
+      height: 7vh;
+      width: 7vh;
       border-radius: 100%;
       background-color: ${(props) => props.theme.colors.black};
       cursor: pointer;
-      position: relative;
+      position: absolute;
+      right: 0;
 
       .image {
         height: 100%;
@@ -100,6 +102,8 @@ export const Point = styled.div<StoriePointProps>`
         height: 30px;
         width: 30px;
       }
+
+      
     }
   }
 `

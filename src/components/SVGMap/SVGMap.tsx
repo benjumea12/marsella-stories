@@ -76,8 +76,7 @@ const SVGMap = (props: SVGMapProps) => {
         }}
       >
         <motion.svg
-          width="1480"
-          height="932"
+          height="110vh"
           viewBox="0 0 1480 932"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

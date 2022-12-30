@@ -13,19 +13,19 @@ export const H1 = styled.h1<TypographyAttributes>`
   text-align: ${(props) => props.align};
 
   @media (max-width: ${media.xl}) {
-    font-size: 35px;
+    //font-size: 35px;
   }
 `
 
 export const H2 = styled.h2<TypographyAttributes>`
   margin: 0px;
-  font-size: 50px;
+  font-size: 7vh;
   font-weight: bold;
   color: ${(props) => props.theme.colors[props.bg]};
   text-align: ${(props) => props.align};
 
   @media (max-width: ${media.xl}) {
-    font-size: 35px;
+    //font-size: 35px;
   }
 `
 
