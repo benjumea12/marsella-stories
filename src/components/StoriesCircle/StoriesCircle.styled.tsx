@@ -78,7 +78,7 @@ export const Point = styled.div<StoriePointProps>`
     justify-content: flex-end;
 
     .line {
-      width: 100%;
+      width: calc(100% - 7vh);
       height: 2px;
       background-color: ${(props) => props.theme.colors.black};
     }
@@ -88,7 +88,6 @@ export const Point = styled.div<StoriePointProps>`
       border-radius: 100%;
       background-color: ${(props) => props.theme.colors.black};
       cursor: pointer;
-      position: absolute;
       right: 0;
 
       .image {
@@ -102,8 +101,6 @@ export const Point = styled.div<StoriePointProps>`
         height: 30px;
         width: 30px;
       }
-
-      
     }
   }
 `
@@ -120,14 +117,10 @@ export const motionStoryItem = {
 
 export const motionPoint = {
   initial: { scale: 0, opacity: 0 },
-  animate: { scale: 1, opacity: 1, transition: {
-    delay: 4
-  } },
+  animate: { scale: 1, opacity: 1, transition: {} },
   whileHover: { scale: 1.5 },
   whileTap: { scale: 1 },
-  transition: {
-    
-  },
+  transition: {},
 }
 
 export const motionImage = {
