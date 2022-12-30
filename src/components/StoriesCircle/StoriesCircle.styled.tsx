@@ -119,14 +119,14 @@ export const motionStoryItem = {
 }
 
 export const motionPoint = {
-  initial: { scale: 0 },
-  animate: { scale: 1 },
+  initial: { scale: 0, opacity: 0 },
+  animate: { scale: 1, opacity: 1, transition: {
+    delay: 4
+  } },
   whileHover: { scale: 1.5 },
   whileTap: { scale: 1 },
   transition: {
-    type: "spring",
-    stiffness: 260,
-    damping: 20,
+    
   },
 }
 
