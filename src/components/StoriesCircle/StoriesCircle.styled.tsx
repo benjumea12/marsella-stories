@@ -12,6 +12,7 @@ export const Main = styled.div`
   justify-content: center;
   @media (max-width: ${media.lg}) {
     flex-direction: column;
+    margin-bottom: 5vh;
     .title {
       text-align: center;
     }
