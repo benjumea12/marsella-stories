@@ -25,4 +25,8 @@ export const Main = styled.div`
       height: 40px;
     }
   }
+
+  @media (max-width: ${media.xl}) {
+    padding: 1em 1.5em
+  }
 `

@@ -2,6 +2,8 @@
 import styled from "styled-components"
 // Interfaces
 import { footerProps } from "./Footer"
+// Theme
+import { media } from "../../theme"
 
 export const Main = styled.div<footerProps>`
   position: fixed;
@@ -24,5 +26,10 @@ export const Main = styled.div<footerProps>`
     margin-right: ${(props) => props.theme.margin.horizontal};
     color: ${(props) =>
       props.bg === "dark" ? props.theme.colors.dark : props.theme.colors.white};
+  }
+
+  @media (max-width: ${media.lg}) {
+    flex-direction: column;
+    text-align: center;
   }
 `

@@ -10,9 +10,11 @@ export const Main = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  .title {
-    //width: 400px;
+  @media (max-width: ${media.lg}) {
+    flex-direction: column;
+    .title {
+      text-align: center;
+    }
   }
 `
 
@@ -32,6 +34,12 @@ export const Circle = styled.div`
     width: 65vh;
   }
 
+  @media (max-width: ${media.lg}) {
+    height: 85vw;
+    width: 85vw;
+    margin: 2em 0;
+  }
+
   .church-contain {
     position: relative;
     z-index: 1;
@@ -47,7 +55,6 @@ export const Circle = styled.div`
     .story-overflow {
       position: fixed;
       border-radius: 100%;
-      //box-shadow: 00px 0px 50px 50px ${(props) => props.theme.colors.dark};
       background-color: ${(props) => props.theme.colors.dark};
     }
 
@@ -58,6 +65,15 @@ export const Circle = styled.div`
     @media (max-width: ${media.xl}) {
       .church-icon {
         height: 50px;
+      }
+    }
+
+    @media (max-width: ${media.lg}) {
+      height: 18vw;
+      width: 18vw;
+
+      .church-icon {
+        height: 14vw;
       }
     }
   }
@@ -83,8 +99,6 @@ export const Point = styled.div<StoriePointProps>`
       background-color: ${(props) => props.theme.colors.black};
     }
     .point {
-      height: 7vh;
-      width: 7vh;
       border-radius: 100%;
       background-color: ${(props) => props.theme.colors.black};
       cursor: pointer;
@@ -100,6 +114,11 @@ export const Point = styled.div<StoriePointProps>`
       @media (max-width: ${media.xl}) {
         height: 30px;
         width: 30px;
+      }
+
+      @media (max-width: ${media.lg}) {
+        height: 5vh;
+        width: 5vh;
       }
     }
   }

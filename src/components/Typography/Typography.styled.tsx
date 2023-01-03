@@ -21,11 +21,15 @@ export const H2 = styled.h2<TypographyAttributes>`
   margin: 0px;
   font-size: 7vh;
   font-weight: bold;
+  line-height: 115%;
   color: ${(props) => props.theme.colors[props.bg]};
   text-align: ${(props) => props.align};
 
   @media (max-width: ${media.xl}) {
     //font-size: 35px;
+  }
+  @media (max-width: ${media.lg}) {
+    font-size: 9vw;
   }
 `
 
