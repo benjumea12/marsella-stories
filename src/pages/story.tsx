@@ -217,9 +217,7 @@ const StoryPage = () => {
       <AnimateSharedLayout>
         <Main>
           {open && (
-            <div
-              className="container-story-overflow"
-            >
+            <div className="container-story-overflow">
               <motion.div
                 className="story-overflow"
                 animate={

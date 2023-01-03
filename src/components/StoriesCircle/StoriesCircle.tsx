@@ -123,12 +123,18 @@ const StoriesCircle = (props: any) => {
             className="story-overflow"
             animate={
               open
-                ? {
-                    height: "120vw",
-                    width: "120vw",
-                    left: "-10vw",
-                    top: "-35vw",
-                  }
+                ? (window.innerWidth > 992 ?{
+                  height: "120vw",
+                  width: "120vw",
+                  left: "-10vw",
+                  top: "-35vw",
+                } :
+                {
+                  height: "120vh",
+                  width: "120vh",
+                  left: "-35vh",
+                  top: "-10vh",
+                })
                 : {}
             }
             transition={{ duration: 0.6 }}

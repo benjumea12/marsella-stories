@@ -12,8 +12,8 @@ export const H1 = styled.h1<TypographyAttributes>`
   color: ${(props) => props.theme.colors[props.bg]};
   text-align: ${(props) => props.align};
 
-  @media (max-width: ${media.xl}) {
-    //font-size: 35px;
+  @media (max-width: ${media.lg}) {
+    font-size: 9vw;
   }
 `
 

@@ -4,7 +4,7 @@ import styled from "styled-components"
 export const Main = styled.div`
   position: absolute;
   z-index: 0;
-  opacity: .4;
+  opacity: .3;
   height: 100vh;
   width: 100vw;
   overflow: hidden;

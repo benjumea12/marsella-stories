@@ -1,5 +1,7 @@
 // Styled components
 import styled from "styled-components"
+// Theme
+import { media } from "../theme"
 
 export const Main = styled.div`
   position: relative;
@@ -23,6 +25,10 @@ export const Main = styled.div`
       .image {
         height: 80vh;
         border-radius: 10px;
+        @media (max-width: ${media.lg}) {
+          height: auto;
+          width: 80vw;
+        }
       }
 
       .close {
@@ -38,6 +44,7 @@ export const Main = styled.div`
       }
     }
   }
+
   .container-story-overflow {
     position: fixed;
     z-index: 10;
@@ -61,6 +68,10 @@ export const Main = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    @media (max-width: ${media.lg}) {
+      margin-top: 2em;
+      height: 80vh;
+    }
 
     .row-item {
       position: relative;
@@ -93,6 +104,17 @@ export const Main = styled.div`
         position: absolute;
         width: 80%;
         z-index: 5;
+      }
+      @media (max-width: ${media.lg}) {
+        height: auto;
+        width: 100%;
+        .picture {
+          height: auto;
+          width: 70%;
+        }
+        .paragraph {
+          width: 100%;
+        }
       }
     }
   }
