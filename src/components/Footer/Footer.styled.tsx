@@ -31,5 +31,8 @@ export const Main = styled.div<footerProps>`
   @media (max-width: ${media.lg}) {
     flex-direction: column;
     text-align: center;
+    .text {
+      display: none;
+    }
   }
 `

@@ -104,6 +104,8 @@ export const Point = styled.div<StoriePointProps>`
       background-color: ${(props) => props.theme.colors.black};
       cursor: pointer;
       right: 0;
+      height: 7vh;
+        width: 7vh;
 
       .image {
         height: 100%;

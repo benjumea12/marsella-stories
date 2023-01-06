@@ -274,7 +274,7 @@ const StoryPage = () => {
             {items.slice(paginator.start, paginator.end).map((item, index) => {
               if (item.type === "title") {
                 return (
-                  <div className="row-item" key={index}>
+                  <div className={`row-item row-${item.type}`} key={index}>
                     <AnimatePresence>
                       {!hide && (
                         <motion.div
@@ -312,7 +312,7 @@ const StoryPage = () => {
               if (item.type === "image") {
                 return (
                   <motion.div
-                    className="row-item"
+                    className={`row-item row-${item.type}`}
                     layoutId={`item-content-${index}`}
                     onClick={() => setSelectedId(index)}
                   >
@@ -351,7 +351,7 @@ const StoryPage = () => {
 
               if (item.type === "paragraph") {
                 return (
-                  <div className="row-item">
+                  <div className={`row-item row-${item.type}`}>
                     <Typography
                       className="paragraph"
                       align={item.align ? item.align : "left"}

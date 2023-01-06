@@ -69,8 +69,11 @@ export const Main = styled.div`
     justify-content: space-evenly;
     align-items: center;
     @media (max-width: ${media.lg}) {
-      margin-top: 2em;
-      height: 80vh;
+      flex-direction: column;
+      margin-top: 6em;
+      height: 65vh;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .row-item {
@@ -106,12 +109,23 @@ export const Main = styled.div`
         z-index: 5;
       }
       @media (max-width: ${media.lg}) {
-        height: auto;
+        height: 10px;
+      }
+    }
+    @media (max-width: ${media.lg}) {
+      .row-title {
+        width: 100%;
+      }
+      .row-image {
         width: 100%;
         .picture {
           height: auto;
-          width: 70%;
+          height: 16vh;
+          width: 80%;
         }
+      }
+      .row-paragraph {
+        width: 100%;
         .paragraph {
           width: 100%;
         }
@@ -122,7 +136,7 @@ export const Main = styled.div`
 
 export const ProgressMain = styled.div`
   position: absolute;
-  left: 2%;
+  left: 3%;
   bottom: ${(props) => props.theme.margin.vertical};
   width: 400px;
   height: 8px;
@@ -135,6 +149,10 @@ export const ProgressMain = styled.div`
     border-radius: 5px;
     background-color: ${(props) => props.theme.colors.green};
   }
+  @media (max-width: ${media.lg}) {
+    bottom: 3em;
+    width: 94%;
+  }
 `
 
 export const ButtonActionMain = styled.div`
@@ -143,9 +161,8 @@ export const ButtonActionMain = styled.div`
   align-items: center;
   cursor: pointer;
   z-index: 5;
-
   bottom: 40px;
-  left: 2%;
+  left: 3%;
 
   .button-item {
     padding: 10px 15px;
@@ -162,6 +179,17 @@ export const ButtonActionMain = styled.div`
   .icon-prev {
     transform: rotate(180deg);
     margin-right: 10px;
+  }
+  @media (max-width: ${media.lg}) {
+    justify-content: flex-end;
+    width: 94%;
+    bottom: 65px;
+    .button-item {
+      padding: 8px 10px;
+    }
+    .icon {
+      height: 2vh;
+    }
   }
 `
 
