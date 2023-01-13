@@ -10,7 +10,7 @@ import {
   itemMotionHideLeft,
   itemMotionHideRight,
   itemMotionShowRight,
-} from "../styled/story.styled"
+} from "./story.styled"
 // Components
 import { Layout, Header, Footer, Typography } from "../components"
 // Theme
@@ -222,12 +222,19 @@ const StoryPage = () => {
                 className="story-overflow"
                 animate={
                   open
-                    ? {
-                        height: "120vw",
-                        width: "120vw",
-                        left: "-10vw",
-                        top: "-35vw",
-                      }
+                    ? window.innerWidth > 992
+                      ? {
+                          height: "120vw",
+                          width: "120vw",
+                          left: "-10vw",
+                          top: "-35vw",
+                        }
+                      : {
+                          height: "120vh",
+                          width: "120vh",
+                          left: "-35vh",
+                          top: "-10vh",
+                        }
                     : {}
                 }
                 transition={{ duration: 0.6 }}

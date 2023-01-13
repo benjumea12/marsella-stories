@@ -14,8 +14,6 @@ const SVGMap = (props: SVGMapProps) => {
   const colorDark = bg === "ligth" ? "#131313" : "#FFFCEF"
   const colorLigth = bg === "ligth" ? "#FFFCEF" : "#131313"
 
-  const strokeWidth = 2
-
   const icon = {
     hidden: {
       pathLength: 0,

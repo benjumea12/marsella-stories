@@ -34,7 +34,7 @@ const StoriePoint = (props: StoriePointProps) => {
 
   const navigateStory = () => {
     setTimeout(() => {
-      navigate("/story")
+      navigate("/story-1")
     }, 600)
   }
 
@@ -72,7 +72,9 @@ const StoriePoint = (props: StoriePointProps) => {
   )
 }
 
-const StoriesCircle = (props: any) => {
+const StoriesCircle = (props: {
+  storiesPoints?: any
+}) => {
   const [open, setOpen] = useState(false)
 
   return (

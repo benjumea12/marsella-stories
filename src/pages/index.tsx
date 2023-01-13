@@ -1,17 +1,19 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
-import { motion } from "framer-motion"
+import React from "react"
+import { graphql } from "gatsby"
+import type { PageProps } from "gatsby"
 // Styled components
 import { Main } from "../styled/index.styled"
 // Components
 import { Layout, Header, Footer, StoriesCircle } from "../components"
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
+  console.log(data.allDataJson.edges)
+
   return (
     <Layout>
       <Header bg="dark" />
       <Main>
-        <StoriesCircle />
+        <StoriesCircle storiesPoints={[]} />
       </Main>
       <Footer bg="dark" />
     </Layout>
@@ -20,4 +22,17 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Historias de Marsella</title>
+export const query = graphql`
+  query IndexPage {
+    allDataJson {
+      edges {
+        node {
+          id
+          title
+          text
+          slug
+        }
+      }
+    }
+  }
+`

@@ -102,6 +102,7 @@ export const Main = styled.div`
         position: absolute;
         border-radius: 10px;
         cursor: pointer;
+        object-fit: cover;
       }
       .paragraph {
         position: absolute;
@@ -120,7 +121,7 @@ export const Main = styled.div`
         width: 100%;
         .picture {
           height: auto;
-          height: 16vh;
+          height: 18vh;
           width: 80%;
         }
       }
