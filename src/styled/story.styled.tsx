@@ -71,7 +71,7 @@ export const Main = styled.div`
     @media (max-width: ${media.lg}) {
       flex-direction: column;
       margin-top: 6em;
-      height: 65vh;
+      height: 70vh;
       align-items: center;
       justify-content: space-between;
     }
@@ -122,7 +122,7 @@ export const Main = styled.div`
         .picture {
           height: auto;
           height: 18vh;
-          width: 80%;
+          width: 70%;
         }
       }
       .row-paragraph {
@@ -151,8 +151,9 @@ export const ProgressMain = styled.div`
     background-color: ${(props) => props.theme.colors.green};
   }
   @media (max-width: ${media.lg}) {
-    bottom: 3em;
-    width: 94%;
+    bottom: 1em;
+    width: 80%;
+    margin-left: 10%;
   }
 `
 
@@ -183,13 +184,11 @@ export const ButtonActionMain = styled.div`
   }
   @media (max-width: ${media.lg}) {
     justify-content: flex-end;
-    width: 94%;
-    bottom: 65px;
+    width: 80%;
+    left: 12%;
+    bottom: 2.2em;
     .button-item {
       padding: 8px 10px;
-    }
-    .icon {
-      height: 2vh;
     }
   }
 `

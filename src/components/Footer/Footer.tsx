@@ -6,13 +6,25 @@ export interface footerProps {
   bg: "dark" | "ligth"
 }
 
-const Footer = (props:footerProps) => {
+const Footer = (props: footerProps) => {
   const { bg } = props
 
   return (
     <Main bg={bg}>
-      <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#" className="authors">@Ana Maria Peña Gomes</a>
+      <div className="content">
+        <div className="item">
+          <p className="text">Un proyecto de</p>
+          <a href="#" className="authors">
+            @Ana Maria Peña Gómes
+          </a>
+        </div>
+        <div className="item">
+          <p className="text">Desallorado por</p>
+          <a href="#" className="authors">
+            @Esteban Benjumea Castrillon
+          </a>
+        </div>
+      </div>
     </Main>
   )
 }

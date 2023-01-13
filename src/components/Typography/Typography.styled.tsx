@@ -77,7 +77,7 @@ export const P = styled.p<TypographyAttributes>`
   text-align: ${(props) => props.align};
 
   @media (max-width: ${media.xl}) {
-    font-size: 20px;
+    font-size: 19px;
   }
 `
 export const P2 = styled.p<TypographyAttributes>`
