@@ -136,23 +136,36 @@ const Title = (props: { title: string }) => {
   )
 }
 
-const ButtonAction = (props: { onNext: any; onPrev: any }) => {
+const ButtonAction = (props: {
+  onNext: any
+  onPrev: any
+  disableNext: boolean
+  disablePrev: boolean
+}) => {
+  console.log(props.disableNext, props.disablePrev)
+
   return (
     <ButtonActionMain>
-      <div className="button-item icon-prev" onClick={props.onPrev}>
+      <button
+        className="button-item icon-prev"
+        onClick={props.onPrev}
+        disabled={props.disablePrev}
+      >
         <img className="icon " src={arrow} />
-      </div>
-      <div className="button-item icon-next" onClick={props.onNext}>
+      </button>
+      <button
+        className="button-item icon-next"
+        onClick={props.onNext}
+        disabled={props.disableNext}
+      >
         <img className="icon " src={arrow} />
-      </div>
+      </button>
     </ButtonActionMain>
   )
 }
 
 const StoryPage = ({ data }: PageProps<Queries.StoryPageQuery>) => {
   const storyData = data.allDataJson.edges[0].node
-  console.log(storyData);
-  
 
   const [changing, setChanging] = useState(false)
   const [progressTab, setProgressTab] = useState(0)
@@ -160,6 +173,8 @@ const StoryPage = ({ data }: PageProps<Queries.StoryPageQuery>) => {
   const [direction, setDirection] = useState<"right" | "left">("right")
   const [selectedId, setSelectedId] = useState<any>(null)
   const [open, setOpen] = useState(false)
+  const [disableNext, setDisableNext] = useState(false)
+  const [disablePrev, setDisablePrev] = useState(true)
 
   const [paginator, setPaginator] = useState({
     start: 0,
@@ -192,13 +207,20 @@ const StoryPage = ({ data }: PageProps<Queries.StoryPageQuery>) => {
     setTimeout(() => {
       if (changing) {
         if (direction === "right") {
-          if (progressTab < 1) {
-            setProgressTab(progressTab + 1)
+          console.log(itemsSteps.length);
+          
+          setProgressTab(progressTab + 1)
+          if (progressTab + 1 === itemsSteps.length - 1) {
+            setDisableNext(true)
           }
-        } else {
-          if (progressTab > 0) {
+          setDisablePrev(false)
+        }
+        if (direction === "left") {
             setProgressTab(progressTab - 1)
-          }
+            if (progressTab === 1) {
+              setDisablePrev(true)
+            }
+            setDisableNext(false)
         }
       }
       setChanging(false)
@@ -219,7 +241,12 @@ const StoryPage = ({ data }: PageProps<Queries.StoryPageQuery>) => {
   return (
     <Layout bg="dark">
       <Header bg="ligth" open={() => setOpen(true)} />
-      <ButtonAction onNext={handleNext} onPrev={handlePrev} />
+      <ButtonAction
+        onNext={handleNext}
+        onPrev={handlePrev}
+        disableNext={disableNext}
+        disablePrev={disablePrev}
+      />
 
       <Main>
         {open && (

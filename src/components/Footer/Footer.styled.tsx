@@ -37,6 +37,18 @@ export const Main = styled.div<footerProps>`
   }
 
   @media (max-width: ${media.lg}) {
-    display: none;
+    .content {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: ${(props) => props.theme.margin.vertical} 5%;
+      .item {
+        p {
+          display: none;
+        }
+        .authors {
+          margin-left: 0px;
+        }
+      }
+    }
   }
 `

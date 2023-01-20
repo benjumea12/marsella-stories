@@ -71,7 +71,7 @@ export const Main = styled.div`
     @media (max-width: ${media.lg}) {
       flex-direction: column;
       margin-top: 6em;
-      height: 70vh;
+      height: 65vh;
       align-items: center;
       justify-content: space-between;
     }
@@ -137,9 +137,11 @@ export const Main = styled.div`
 
 export const ProgressMain = styled.div`
   position: absolute;
-  left: 3%;
+  left: 0;
+  right: 0;
   bottom: ${(props) => props.theme.margin.vertical};
-  width: 400px;
+  margin: auto;
+  width: 30%;
   height: 8px;
   border-radius: 5px;
   background-color: #404040;
@@ -151,9 +153,8 @@ export const ProgressMain = styled.div`
     background-color: ${(props) => props.theme.colors.green};
   }
   @media (max-width: ${media.lg}) {
-    bottom: 1em;
-    width: 80%;
-    margin-left: 10%;
+    bottom: 4.8em;
+    width: 90%;
   }
 `
 
@@ -161,34 +162,56 @@ export const ButtonActionMain = styled.div`
   position: absolute;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  justify-content: space-between;
+  width: 100vw;
+  height: 0px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   z-index: 5;
-  bottom: 40px;
-  left: 3%;
 
   .button-item {
-    padding: 10px 15px;
+    position: absolute;
+    right: 0;
+    padding: 30px 15px;
     background-color: ${(props) => props.theme.colors.yellow};
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .icon {
-    height: 3vh;
+    border: none;
+    cursor: pointer;
+    &:disabled {
+      cursor: auto;
+      opacity: .5;
+    }
+    .icon {
+      height: 3vh;
+      margin-left: 5px;
+    }
+    transition: all 300ms;
   }
 
   .icon-prev {
+    left: 0;
+    right: auto;
     transform: rotate(180deg);
-    margin-right: 10px;
   }
+
   @media (max-width: ${media.lg}) {
     justify-content: flex-end;
-    width: 80%;
-    left: 12%;
+    width: auto;
+    top: auto;
+    right: 5%;
     bottom: 2.2em;
     .button-item {
-      padding: 8px 10px;
+      position: relative;
+      padding: 8px 18px;
+      .icon {
+        height: 2.5vh;
+      }
+    }
+    .icon-prev {
+      margin-right: 10px;
     }
   }
 `
