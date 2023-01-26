@@ -142,7 +142,6 @@ const ButtonAction = (props: {
   disableNext: boolean
   disablePrev: boolean
 }) => {
-  console.log(props.disableNext, props.disablePrev)
 
   return (
     <ButtonActionMain>
@@ -207,8 +206,6 @@ const StoryPage = ({ data }: PageProps<Queries.StoryPageQuery>) => {
     setTimeout(() => {
       if (changing) {
         if (direction === "right") {
-          console.log(itemsSteps.length);
-          
           setProgressTab(progressTab + 1)
           if (progressTab + 1 === itemsSteps.length - 1) {
             setDisableNext(true)
@@ -216,11 +213,11 @@ const StoryPage = ({ data }: PageProps<Queries.StoryPageQuery>) => {
           setDisablePrev(false)
         }
         if (direction === "left") {
-            setProgressTab(progressTab - 1)
-            if (progressTab === 1) {
-              setDisablePrev(true)
-            }
-            setDisableNext(false)
+          setProgressTab(progressTab - 1)
+          if (progressTab === 1) {
+            setDisablePrev(true)
+          }
+          setDisableNext(false)
         }
       }
       setChanging(false)
@@ -445,8 +442,6 @@ export const query = graphql`
         node {
           id
           title
-          text
-          slug
         }
       }
     }

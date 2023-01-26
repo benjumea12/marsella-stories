@@ -8,25 +8,31 @@ export const Main = styled.div`
   z-index: 1;
   top: 0;
   width: 100%;
-  padding: ${(props) => props.theme.margin.vertical} ${(props) => props.theme.margin.horizontal};
+  display: flex;
+  padding: ${(props) => props.theme.margin.vertical} 0;
   .logo {
     height: 60px;
+    margin-left: ${(props) => props.theme.margin.horizontal};
   }
   .logo-ligth {
     height: 50px;
     cursor: pointer;
+    margin-left: ${(props) => props.theme.margin.horizontal};
   }
 
   @media (max-width: ${media.xl}) {
     .logo {
       height: 50px;
+      margin-right: ${(props) => props.theme.margin.horizontal};
     }
     .logo-ligth {
       height: 40px;
+      margin-right: ${(props) => props.theme.margin.horizontal};
     }
   }
 
   @media (max-width: ${media.xl}) {
-    padding: 1em 1.5em
+    padding: .8em 0;
+    justify-content: flex-end;
   }
 `
