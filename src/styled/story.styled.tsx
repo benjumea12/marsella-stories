@@ -3,7 +3,7 @@ import styled from "styled-components"
 // Theme
 import { media } from "../theme"
 
-export const Main = styled.div`
+export const Main = styled.main`
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -182,7 +182,7 @@ export const ButtonActionMain = styled.div`
     cursor: pointer;
     &:disabled {
       cursor: auto;
-      opacity: .5;
+      opacity: 0.5;
     }
     .icon {
       height: 3vh;

@@ -4,7 +4,7 @@ import type { PageProps } from "gatsby"
 // Styled components
 import { Main } from "../styled/index.styled"
 // Components
-import { Layout, Header, Footer, StoriesCircle } from "../components"
+import { Layout, Header, Footer, StoriesCircle, SEO } from "../components"
 
 const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   console.log(data.allDataJson.edges)
@@ -21,6 +21,8 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
 }
 
 export default IndexPage
+
+export const Head = () => <SEO />
 
 export const query = graphql`
   query IndexPage {

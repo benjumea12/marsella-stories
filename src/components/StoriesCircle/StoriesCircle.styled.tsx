@@ -105,7 +105,7 @@ export const Point = styled.div<StoriePointProps>`
       cursor: pointer;
       right: 0;
       height: 7vh;
-        width: 7vh;
+      width: 7vh;
 
       .image {
         height: 100%;
@@ -115,8 +115,8 @@ export const Point = styled.div<StoriePointProps>`
       }
 
       @media (max-width: ${media.xl}) {
-        height: 30px;
-        width: 30px;
+        height: 6vh;
+        width: 6vh;
       }
 
       @media (max-width: ${media.lg}) {

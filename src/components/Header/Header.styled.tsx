@@ -31,8 +31,8 @@ export const Main = styled.div`
     }
   }
 
-  @media (max-width: ${media.xl}) {
-    padding: .8em 0;
+  @media (max-width: ${media.lg}) {
+    padding: 0.8em 0;
     justify-content: flex-end;
   }
 `

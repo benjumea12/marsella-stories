@@ -13,7 +13,7 @@ import {
   itemMotionShowRight,
 } from "../styled/story.styled"
 // Components
-import { Layout, Header, Footer, Typography } from "../components"
+import { Layout, Header, Footer, Typography, SEO } from "../components"
 // Theme
 import { getRandomInt } from "../theme"
 // Images
@@ -142,7 +142,6 @@ const ButtonAction = (props: {
   disableNext: boolean
   disablePrev: boolean
 }) => {
-
   return (
     <ButtonActionMain>
       <button
@@ -434,6 +433,8 @@ const StoryPage = ({ data }: PageProps<Queries.StoryPageQuery>) => {
 }
 
 export default StoryPage
+
+export const Head = () => <SEO title="Historia..." />
 
 export const query = graphql`
   query StoryPage($slug: String) {

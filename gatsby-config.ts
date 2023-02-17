@@ -1,9 +1,12 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Historias de Marsella`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
+    description: "",
+    image: "",
+    linkedinUsername: "https://www.linkedin.com/in/benjumea-c22/",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -19,7 +22,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/data`,
       },
     },
-  ]
-};
+  ],
+}
 
-export default config;
+export default config

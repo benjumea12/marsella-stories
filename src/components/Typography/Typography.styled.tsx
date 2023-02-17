@@ -26,7 +26,7 @@ export const H2 = styled.h2<TypographyAttributes>`
   text-align: ${(props) => props.align};
 
   @media (max-width: ${media.xl}) {
-    //font-size: 35px;
+    font-size: 6vh;
   }
   @media (max-width: ${media.lg}) {
     font-size: 9vw;
